@@ -7,13 +7,21 @@ public class JavaApplication2 {
     public static void main(String[] args) {
     Conta c1 = new Conta();
     Scanner leitor = new Scanner(System.in);
-    c1.titular.dono = "Bernardo1";
+    Cliente Bernardo = new Cliente();
+    Bernardo.dono = "Bernardo";
+    Bernardo.sobrenome = "Pieropan";
+    Bernardo.cpf = "157416851";
+    c1.titular = Bernardo;
     c1.numero = 1;
     c1.saldo = 50000;
     c1.limite = 25000;
     // Instanciar um objeto do tipo conta
     Conta c2 = new Conta();
-    c2.titular.dono = "Bernardo2";
+    Cliente Lucas = new Cliente();
+    Lucas.dono="Lucas";
+    Lucas.sobrenome="Peixoto";
+    Lucas.cpf="1548415318";
+    c2.titular= Lucas;
     c2.numero = 2;
     c2.saldo = 50000;
     c2.limite = 25000;
@@ -81,7 +89,7 @@ public class JavaApplication2 {
             System.out.println("Você digitou uma operação inválida.");
     }
             System.out.println("Insira 0 para finalizar e 1 para fazer nova operação");
-        op = leitor.nextInt();
+            op = leitor.nextInt();
     }
             
             System.out.println("---------------------------------------");
