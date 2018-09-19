@@ -10,12 +10,12 @@ package javaapplication2;
  * @author Estacio
  */
 class Conta {
+    //atributos
    int numero;
-   String dono;
+   Cliente titular;
    double saldo;
    double limite;
-   double conta;
-   
+    //métodos   
 //   void saca (double quantidade){
 //       this.saldo -=quantidade;
 //   }
@@ -34,4 +34,14 @@ class Conta {
    void deposita (double quantidade){
        this.saldo+= quantidade;
    }
+void tranfere(double quantidade, Conta destino){
+   if(this.saca(quantidade)){
+       destino.deposita(quantidade);
+       System.out.println("Transferência feita com sucesso!");
+       System.out.println("");
+   }else{
+       System.out.println("Não tem saldo suficiente!");    
+       System.out.println("");
+}
+}
 }
