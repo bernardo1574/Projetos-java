@@ -1,25 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javaapplication2;
-
 /**
  *
- * @author Estacio
+ * @author Bernardo
  */
 class Conta {
     //atributos
-   int numero;
-   Cliente titular;
-   double saldo;
-   double limite;
+   private int numero;
+   private Cliente titular;
+   private double saldo;
+   private double limite;
+    //get e set
+    public int getNumero(){
+        return numero;
+    }
+    public void setNumero(int numero){
+        this.numero = numero;
+    }
+    public Cliente getCliente(){
+        return titular;
+    }
+    public void setCliente(Cliente titular){
+        this.titular = titular;
+    }
+    public double getSaldo(){
+        return saldo;
+   }
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }
+    public double getLimite(){
+        return limite;
+   }
+    public void setLimite(double limite){
+        this.limite = limite;
+    }
     //métodos   
 //   void saca (double quantidade){
 //       this.saldo -=quantidade;
-//   }
-   
+//   }     
    boolean saca(double quantidade){
        if(quantidade>this.saldo){
            return false;
@@ -27,10 +45,7 @@ class Conta {
            this.saldo-=quantidade;
            return true;
        }
-   }
-   
-   
-   
+   }  
    void deposita (double quantidade){
        this.saldo+= quantidade;
    }
